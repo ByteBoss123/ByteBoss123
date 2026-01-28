@@ -1,5 +1,5 @@
 <!-- PROFILE HEADER WITH SIDE IMAGE -->
-<img align="right" alt="Profile" width="320" src="C:\\Users\\amarg\\Downloads\\WhatsApp Image 2026-01-28 at 2.10.42 AM.jpeg"/>
+ <img src="WhatsApp Image 2026-01-28 at 2.10.42 AM.jpeg" width="200" style="border-radius: 10px;" />
 
 # Amarnath Reddy Ganta  
 
