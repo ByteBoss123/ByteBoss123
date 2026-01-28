@@ -14,6 +14,9 @@ I specialize in building **end-to-end machine learning systems**—from explorat
 
 My work focuses on **recommendation systems, predictive analytics, and scalable ML infrastructure**, with an emphasis on measurable business impact and production readiness.
 
+Over the past year, I've built a hybrid recommendation engine using PyTorch and Spark that improved accuracy by 22% across 1M+ interactions, engineered ETL pipelines and BI dashboards that reduced decision time by 60% for banking clients, and deployed ML APIs serving 10K+ daily predictions with 99.5% uptime. My work spans the full data science lifecycle—from SQL queries and exploratory analysis to distributed computing and cloud deployment.
+
+I started in deep learning research during undergrad and spent a year at Smart Mieten Tech learning that the best data science bridges technical excellence with business value.
 ---
 
 ## 🛠️ Tech Stack
