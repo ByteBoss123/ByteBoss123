@@ -122,7 +122,7 @@ Built a multi-hop RAG pipeline with TF-IDF, embeddings, clustering, and FLAN-T5.
 
 ### 🔹 Resume–Job Matching Ranking System 
 Built embedding-based ranking model matching resumes with job descriptions improving top-3 relevance accuracy by 18% measured using MAP@3.
-🔗 C:\\Users\\amarg\\Downloads\\resume_matcher
+🔗 C:\Users\amarg\Downloads\resume_matcher
 
 ---
 
