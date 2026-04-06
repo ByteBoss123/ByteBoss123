@@ -85,7 +85,7 @@ I started in deep learning research during undergrad and spent a year at Smart M
 Scalable ML pipeline for cleaning, tagging, and structuring cinematic metadata.  
 📈 Improved tagging consistency by **20%** and reduced preprocessing errors by **25%**.
 
-🔗 https://colab.research.google.com/drive/1eZupg5H4y-QLPlgQVYjHK6xXDfvaYs-f?usp=sharing  
+🔗 https://github.com/ByteBoss123/Data-Classification-Pipeline 
 
 ---
 
