@@ -93,7 +93,7 @@ Scalable ML pipeline for cleaning, tagging, and structuring cinematic metadata.
 Hybrid recommendation engine using deep learning and collaborative filtering.  
 📈 Improved accuracy by **22% across 1M+ interactions**.
 
-🔗 https://colab.research.google.com/drive/1eZupg5H4y-QLPlgQVYjHK6xXDfvaYs-f?usp=sharing 
+🔗 https://github.com/ByteBoss123/Content-Recommendation/blob/main/hm_hybrid_recsys%20(2).py 
 
 ---
 
