@@ -113,10 +113,10 @@ Real-time pricing optimization with XGBoost and Random Forest.
 
 ---
 
-### 🔹 Multi-Hop RAG-Based Question Answering System
+### 🔹 Gen AI, QA System
 Built a multi-hop RAG pipeline with TF-IDF, embeddings, clustering, and FLAN-T5.
 
-🔗 https://colab.research.google.com/drive/1R8ZHS-PYM699lLETBWofWlRCxgxlP3Ds?usp=sharing  
+🔗 https://github.com/ByteBoss123/Gen-AI-QA-System
 
 ---
 
