@@ -1,0 +1,68 @@
+{
+  "coldstart_overall": {
+    "label": "Cold-start model (KYC + consortium/graph features), all accounts",
+    "auc": 0.8,
+    "ks_statistic": 0.4969,
+    "operating_threshold": 0.4213,
+    "precision_at_threshold": 0.4055,
+    "recall_at_threshold": 0.5299,
+    "fpr_at_threshold": 0.0584,
+    "n": 3590,
+    "n_fraud": 251
+  },
+  "coldstart_on_coldstart_accounts": {
+    "label": "Cold-start model, cold-start accounts only",
+    "auc": 0.9996,
+    "ks_statistic": 0.9856,
+    "operating_threshold": 0.3632,
+    "precision_at_threshold": 0.8911,
+    "recall_at_threshold": 1.0,
+    "fpr_at_threshold": 0.0367,
+    "n": 390,
+    "n_fraud": 90
+  },
+  "supervised_behavioral_overall": {
+    "label": "Supervised (behavioral features only), held-out test set",
+    "auc": 0.9867,
+    "ks_statistic": 0.9092,
+    "operating_threshold": 0.81,
+    "precision_at_threshold": 0.4518,
+    "recall_at_threshold": 1.0,
+    "fpr_at_threshold": 0.0908,
+    "n": 1077,
+    "n_fraud": 75
+  },
+  "supervised_behavioral_on_coldstart_accounts": {
+    "label": "Supervised (behavioral features only), cold-start accounts in test split",
+    "auc": 0.5,
+    "ks_statistic": 0.0,
+    "operating_threshold": 0.81,
+    "precision_at_threshold": 0.1947,
+    "recall_at_threshold": 1.0,
+    "fpr_at_threshold": 1.0,
+    "n": 113,
+    "n_fraud": 22
+  },
+  "supervised_full_overall": {
+    "label": "Supervised (behavioral + KYC + consortium/graph features), held-out test set",
+    "auc": 1.0,
+    "ks_statistic": 1.0,
+    "operating_threshold": 0.0018,
+    "precision_at_threshold": 0.6,
+    "recall_at_threshold": 1.0,
+    "fpr_at_threshold": 0.0499,
+    "n": 1077,
+    "n_fraud": 75
+  },
+  "supervised_full_on_coldstart_accounts": {
+    "label": "Supervised (full feature set), cold-start accounts in test split",
+    "auc": 1.0,
+    "ks_statistic": 1.0,
+    "operating_threshold": 0.0055,
+    "precision_at_threshold": 0.7857,
+    "recall_at_threshold": 1.0,
+    "fpr_at_threshold": 0.0659,
+    "n": 113,
+    "n_fraud": 22
+  }
+}

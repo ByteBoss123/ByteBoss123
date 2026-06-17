@@ -1,139 +1,29 @@
-<!-- PROFILE HEADER WITH SIDE IMAGE -->
- <img src="WhatsApp Image 2026-01-28 at 2.10.42 AM.jpeg" width="200" style="border-radius: 10px;" />
+# Deployment notes
 
-# Amarnath Reddy Ganta  
+## Enabling natural-language explanations
 
-🎓 MS in Data Analytics Engineering @ George Mason University (May 2026)  
-📊 Data Scientist | Machine Learning Engineer | Data Engineer  
-🚀 Building production-ready ML & data systems with real-world impact  
+`src/llm_explainer.py` works out of the box with a deterministic, rule-based
+explanation generator -- no API key required, which is what produced
+`results/sample_explanations.json` in this repo.
 
----
+To upgrade to natural-language explanations from Claude, set an API key
+before running the pipeline:
 
-## 🧠 About Me
-I specialize in building **end-to-end machine learning systems**—from exploratory analysis and modeling to cloud deployment and monitoring.
+```
+export ANTHROPIC_API_KEY=sk-ant-...
+python src/pipeline.py
+```
 
-My work focuses on **recommendation systems, predictive analytics, and scalable ML infrastructure**, with an emphasis on measurable business impact and production readiness.
+No code changes needed -- `llm_explainer._call_claude()` checks for the key
+at runtime and falls back to the template generator automatically if it's
+missing or if the API call fails for any reason, so the pipeline never
+breaks because of network/credential issues.
 
-Over the past year, I've built a hybrid recommendation engine using PyTorch and Spark that improved accuracy by 22% across 1M+ interactions, engineered ETL pipelines and BI dashboards that reduced decision time by 60% for banking clients, and deployed ML APIs serving 10K+ daily predictions with 99.5% uptime. My work spans the full data science lifecycle—from SQL queries and exploratory analysis to distributed computing and cloud deployment.
+## Running on a schedule
 
-I started in deep learning research during undergrad and spent a year at Smart Mieten Tech learning that the best data science bridges technical excellence with business value.
-
----
-
-## 🛠️ Tech Stack
-
-### 💻 Languages
-<p align="left">
-  <img src="https://skillicons.dev/icons?i=python,java,scala,r,sql" />
-</p>
-
-### 🤖 Machine Learning & Data
-<p align="left">
-  <img src="https://skillicons.dev/icons?i=pytorch,tensorflow,sklearn,spark" />
-</p>
-
-<p>
-  <img src="https://img.shields.io/badge/XGBoost-ML-orange" />
-  <img src="https://img.shields.io/badge/NLP-Text%20AI-blue" />
-  <img src="https://img.shields.io/badge/Graph%20ML-Networks-green" />
-</p>
-
----
-
-### 🗄️ Databases & Warehousing
-<p align="left">
-  <img src="https://skillicons.dev/icons?i=postgres,mysql,mongodb" />
-</p>
-
-<p>
-  <img src="https://img.shields.io/badge/BigQuery-Data%20Warehouse-blue" />
-  <img src="https://img.shields.io/badge/Redshift-AWS-red" />
-  <img src="https://img.shields.io/badge/Snowflake-Cloud%20DW-lightblue" />
-</p>
-
----
-
-### 📊 Visualization & BI
-<p align="left">
-  <img src="https://skillicons.dev/icons?i=tableau,powerbi" />
-</p>
-
-<p>
-  <img src="https://img.shields.io/badge/Matplotlib-Visualization-yellow" />
-  <img src="https://img.shields.io/badge/Seaborn-Stats-purple" />
-  <img src="https://img.shields.io/badge/Plotly-Interactive-brightgreen" />
-</p>
-
----
-
-### ☁️ Cloud, DevOps & Big Data
-<p align="left">
-  <img src="https://skillicons.dev/icons?i=aws,azure,gcp,docker,git" />
-</p>
-
-<p>
-  <img src="https://img.shields.io/badge/Airflow-Orchestration-blue" />
-  <img src="https://img.shields.io/badge/Hadoop-Big%20Data-yellow" />
-  <img src="https://img.shields.io/badge/Databricks-Analytics-red" />
-</p>
-
----
-
-## 📌 Featured Projects
-
-### 🔹 AI-Driven Data Classification Pipeline (AWS)
-Scalable ML pipeline for cleaning, tagging, and structuring cinematic metadata.  
-📈 Improved tagging consistency by **20%** and reduced preprocessing errors by **25%**.
-
-🔗 https://github.com/ByteBoss123/Data-Classification-Pipeline 
-
----
-
-### 🔹 Content Recommendation & Personalization System
-Hybrid recommendation engine using deep learning and collaborative filtering.  
-📈 Improved accuracy by **22% across 1M+ interactions**.
-
-🔗 https://github.com/ByteBoss123/Content-Recommendation/blob/main/hm_hybrid_recsys%20(2).py 
-
----
-
-### 🔹 Fraud Detection in Financial Transactions
-Anomaly detection using supervised & unsupervised ML models.  
-📉 Reduced false positives by **20%**.
-
-🔗 https://colab.research.google.com/drive/1A9z-nMFC_zWOOnryORdum3cSoAiSldZT?usp=sharing
-
----
-
-### 🔹 Dynamic Ticket Pricing Using Machine Learning
-Real-time pricing optimization with XGBoost and Random Forest.  
-📈 Improved pricing accuracy by **18%**.
-
-🔗 https://www.kaggle.com/code/amar44/dynamic-ticket-pricing  
-
----
-
-### 🔹 Gen AI, QA System
-Built a multi-hop RAG pipeline with TF-IDF, embeddings, clustering, and FLAN-T5.
-
-🔗 https://github.com/ByteBoss123/Gen-AI-QA-System
-
----
-
-### 🔹 Resume–Job Matching Ranking System 
-Built embedding-based ranking model matching resumes with job descriptions improving top-3 relevance accuracy by 18% measured using MAP@3.
-🔗 C:\Users\amarg\Downloads\resume_matcher
-
----
-
-## 📈 GitHub Stats
-![GitHub Stats](https://github-readme-stats.vercel.app/api?username=amarnathreddy&show_icons=true&theme=default)
-
----
-
-## 🤝 Let’s Connect
-- 💼 LinkedIn: https://www.linkedin.com/in/amarnath-reddy-ganta  
-- 📊 Kaggle: https://www.kaggle.com/amar44  
-
-⭐ If you like my work, feel free to star ⭐ a repo or connect!
-
+For a real deployment, `pipeline.py` would be split into two parts: a
+nightly batch job (data ingestion, graph rebuild, model refresh) and a
+real-time scoring path that loads the fitted cold-start model/scaler and
+scores a single new account or transaction against it without re-running
+the whole pipeline. This repo keeps them together for clarity and because
+it's evaluated as a single coherent run.
