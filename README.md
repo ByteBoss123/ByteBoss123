@@ -15,52 +15,26 @@ Focus areas: Machine learning, fraud detection, demand forecasting, ETL pipeline
 
 ## 🚀 Featured Projects
 
-🛡️ RingGuard — Fraud Ring Detection
+TenantShield — AI-Powered Rental Application Screening
+Agentic AI system for rental application screening with a fairness guardrail layer, built on AWS SageMaker + Bedrock. Caught a real, measured 2.1x disparity in high-risk classification rates between protected-class proxy groups — documented in the model card, including what mitigation isn't yet in place.
 
-Graph-based fraud ring detection system identifying coordinated fraud networks in transaction data.
+PixelSeek — Multimodal Creative Asset Search
+CLIP embeddings + FAISS vector search + semantic reranking over a large creative asset corpus, served via FastAPI.
 
+SpeechCommandNet — Isolated Word Recognition from Scratch
+Small CNN trained from scratch (no pretrained weights) on synthetic MFCC speech data across 7 voices. 95.2% accuracy on entirely unseen voices held out from training, with a documented error breakdown by accent/voice.
 
-Achieved 0.9996 AUC, correctly flagged 20/20 known fraud rings
-Built on graph feature engineering + ensemble classification
-Stack: Python, NetworkX, XGBoost, scikit-learn
+SmartDischarge — 30-Day Hospital Readmission Prediction
+End-to-end ML system trained on 81K+ clinical encounters across 130 US hospitals. FastAPI deployment with SHAP explainability and CMS penalty impact quantification (~$190K/year estimated impact per hospital from a 13% relative reduction in readmissions).
 
+FinDocQA — LLM Failure-Mode Detection for Financial QA
+RAG-based QA over real SEC filings, with a defined taxonomy of financial-document LLM failure modes, automatic detectors, and a monitoring dashboard.
 
-🏠 TenantShield — Fair Housing Risk Model
+AdPulse — Ad Auction & Bidding Analytics
+Bid landscape estimation and CTR model calibration built on real RTB auction data (iPinYou Global RTB Bidding Algorithm Competition dataset, via the companion code to Zhang, Yuan & Wang, WSDM 2016).
 
-End-to-end pipeline combining AWS SageMaker, Bedrock RAG, and XGBoost to flag risk in tenant/housing decisioning.
-
-
-Fairness guardrail caught a 2.1x disparity in model outcomes across protected groups
-Stack: AWS SageMaker, Bedrock, XGBoost, Python
-
-
-🛍️ RetailRetain — Churn Prediction & Causal Inference
-
-Combines XGBoost churn prediction with PSM/DiD causal inference to measure true intervention impact.
-
-
-Measured $11.11 incremental lift per customer (p = 0.0068)
-Separates correlation from causation in retention campaign design
-Stack: Python, XGBoost, causal inference (PSM, Difference-in-Differences)
-
-
-💳 CardLens — Credit Card Transaction Intelligence
-
-Transaction intelligence system combining XGBoost classification with a RAG layer for analyst-facing query support.
-
-
-Stack: Python, XGBoost, RAG, FastAPI
-
-
-🎯 BanditRank — Contextual Bandit Recommendation Engine
-
-Contextual bandit system for real-time recommendation ranking.
-
-
-Delivered +8.01% CTR lift (p = 0.038) over baseline ranking
-Stack: Python, contextual bandits, A/B testing framework
-
-
+CardLens — Credit Card Transaction Intelligence
+XGBoost anomaly scoring combined with LLM-powered natural language analytics and a structured evaluation framework.
 
 🔬 Other Work
 
