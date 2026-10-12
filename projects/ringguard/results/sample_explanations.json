@@ -1,0 +1,50 @@
+[
+  {
+    "account_id": "acct_2e5c423b66",
+    "score": 1.0,
+    "explanation": "Account acct_2e5c423b66 (risk score 1.00) was flagged because it shares a device fingerprint with 5 other account(s); belongs to a connected network of 7 linked accounts/devices.",
+    "explanation_source": "template"
+  },
+  {
+    "account_id": "acct_2925f8ba49",
+    "score": 0.9834352957610873,
+    "explanation": "Account acct_2925f8ba49 (risk score 0.98) was flagged because it shares a device fingerprint with 5 other account(s); belongs to a connected network of 7 linked accounts/devices.",
+    "explanation_source": "template"
+  },
+  {
+    "account_id": "acct_7cd80f230e",
+    "score": 0.9656823163792811,
+    "explanation": "Account acct_7cd80f230e (risk score 0.97) was flagged because it shares a device fingerprint with 5 other account(s); belongs to a connected network of 7 linked accounts/devices.",
+    "explanation_source": "template"
+  },
+  {
+    "account_id": "acct_765dd11e18",
+    "score": 0.9613305726097418,
+    "explanation": "Account acct_765dd11e18 (risk score 0.96) was flagged because it shares a device fingerprint with 5 other account(s); belongs to a connected network of 7 linked accounts/devices.",
+    "explanation_source": "template"
+  },
+  {
+    "account_id": "acct_0fd9e293b4",
+    "score": 0.9597911797084377,
+    "explanation": "Account acct_0fd9e293b4 (risk score 0.96) was flagged because it shares a device fingerprint with 5 other account(s); belongs to a connected network of 7 linked accounts/devices.",
+    "explanation_source": "template"
+  },
+  {
+    "account_id": "acct_5614a2277f",
+    "score": 0.9568657035132861,
+    "explanation": "Account acct_5614a2277f (risk score 0.96) was flagged because it shares a device fingerprint with 5 other account(s); belongs to a connected network of 7 linked accounts/devices.",
+    "explanation_source": "template"
+  },
+  {
+    "account_id": "acct_ebf10c89a5",
+    "score": 0.9545662467997096,
+    "explanation": "Account acct_ebf10c89a5 (risk score 0.95) was flagged because it shares a device fingerprint with 5 other account(s); belongs to a connected network of 7 linked accounts/devices.",
+    "explanation_source": "template"
+  },
+  {
+    "account_id": "acct_37aa727591",
+    "score": 0.9523812764256905,
+    "explanation": "Account acct_37aa727591 (risk score 0.95) was flagged because it shares a device fingerprint with 5 other account(s); belongs to a connected network of 7 linked accounts/devices.",
+    "explanation_source": "template"
+  }
+]

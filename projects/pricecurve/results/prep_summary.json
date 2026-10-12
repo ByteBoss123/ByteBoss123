@@ -1,0 +1,15 @@
+{
+  "raw_rows": 541909,
+  "after_drop_cancellations": 532621,
+  "after_drop_nonpositive": 530104,
+  "after_uk_only": 485123,
+  "after_drop_non_product_codes": 484035,
+  "after_drop_partial_dec_2011": 460467,
+  "product_months_all": 31244,
+  "products_all": 3902,
+  "top_n_revenue_share": 0.5581,
+  "model_products": 300,
+  "model_obs": 3352,
+  "model_median_months_per_product": 12.0,
+  "model_min_months_per_product": 6
+}

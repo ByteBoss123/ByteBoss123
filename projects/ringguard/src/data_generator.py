@@ -20,10 +20,10 @@ reproducibility.
 """
 import numpy as np
 import pandas as pd
-import uuid
 from datetime import datetime, timedelta
 
 RNG = np.random.default_rng(42)
+ID_RNG = np.random.default_rng(7)  # separate stream so ids are reproducible without shifting the data draws
 
 PAYMENT_RAILS = ["ACH", "Wire", "RTP", "Check"]
 START_DATE = datetime(2026, 1, 1)
@@ -31,7 +31,7 @@ SIM_DAYS = 90
 
 
 def _new_id(prefix):
-    return f"{prefix}_{uuid.uuid4().hex[:10]}"
+    return f"{prefix}_{ID_RNG.bytes(5).hex()}"
 
 
 def generate_accounts(n_legit=3000, n_synthetic_id_rings=15, ring_size=6,

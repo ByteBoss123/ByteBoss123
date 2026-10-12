@@ -1,0 +1,25 @@
+{
+  "n_products": 300,
+  "n_obs": 3352,
+  "chains": 4,
+  "draws_per_chain": 1000,
+  "tune": 1000,
+  "divergences": 0,
+  "max_rhat": 1.0096,
+  "min_ess": 292.7,
+  "mu_beta_mean": -3.753,
+  "mu_beta_ci94": [
+    -4.128,
+    -3.377
+  ],
+  "sigma_beta_mean": 2.058,
+  "gamma_holiday_mean": 0.631,
+  "gamma_holiday_ci94": [
+    0.555,
+    0.706
+  ],
+  "ols_median_elasticity": -3.845,
+  "ols_wrong_sign_share": 0.1367,
+  "bayes_wrong_sign_share_posterior_mean": 0.01,
+  "bayes_products_ci94_below_zero": 204
+}
