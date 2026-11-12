@@ -14,6 +14,10 @@ including the cases where the simpler baseline wins.
 
 ## Experience
 
+- **Business Data Scientist, Pearmund Cellars** (Jan–Sep 2026): consolidated 3M+ transactions across 12 vintages
+  into PostgreSQL with a Python/Pandas ETL pipeline, cutting the nightly run from 80 to 44 minutes. Built 3 Tableau sales
+  KPI dashboards that save 5 planning hours a week; flagging high-margin products selling 14% below forecast led to
+  moving 2,400 bottles from wholesale to retail, capturing $43,200 in incremental retail margin.
 - **Machine Learning Engineer Co-Op, CEC TechConnect DC** (Feb–Apr 2026): built a geospatial clustering and
   logistic regression pipeline over 1,500+ grant applications and $19.4M in requested funding across 8 DC wards,
   cutting analysis time 40% (about 15 hours a week). Built a real-estate valuation pipeline: a 7-source scraper,
