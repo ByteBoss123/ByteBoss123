@@ -10,6 +10,8 @@ I work in two areas:
 Every project uses real data, and every project number below comes from a results file committed in the linked repo,
 including the cases where the simpler baseline wins.
 
+**Open to** Machine Learning Engineer, Data Scientist, Data Engineer and Data Analyst roles. Willing to relocate.
+
 [Portfolio](https://amarnathganta.com) · [LinkedIn](https://www.linkedin.com/in/amarnath-reddy-ganta)
 
 ## Experience
